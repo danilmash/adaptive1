@@ -1,0 +1,97 @@
+@use "vars" as var;
+
+.fun-fact {
+    position: relative;
+    background-color: #fff;
+    @media (min-width:801px) {
+        max-height: 202px;
+        background-image: url(../img/fun-fact-bg.svg);
+        background-size: cover;
+        background-position: left;
+        background-color: transparent;
+        background-repeat: no-repeat;
+    }
+    &::after {
+        position: absolute;
+        content: "";
+        background-image: url(../img/rocket-bg.svg);
+        width: 100px;
+        height: 92px;
+        bottom: -26px;
+        left: -26px;
+        z-index: 2;
+
+        @media (min-width:801px) {
+            all: unset;
+        }
+    }
+    
+    &__blocks {
+        margin: 0 auto; 
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        place-items: center;
+        @media (min-width:801px) {
+            place-items: unset;
+            justify-content: flex-start;
+        }
+    }
+    // .fun-fact__block
+
+    &__block {
+        min-width: 180px;
+        padding: 48px 0;
+        text-align: center;
+        @media (min-width:801px) {
+           text-align: unset;
+        }
+        
+        &:not(:nth-child(1)) {
+            border-top: 1px rgba(30, 12, 62, 0.2) solid;
+            @media (min-width:376px) {
+                border:  none;
+            }
+        }
+
+        &:nth-child(3) {
+            @media (min-width:376px) {
+                width: 80%;
+                grid-column: span 2;
+                border-top: 1px rgba(30, 12, 62, 0.2) solid;
+                max-width: 350px;
+            }
+            @media (min-width:679px) {
+                grid-column: span 1;
+                border: none;
+                
+            }
+        }
+    }
+
+    // .fun-fact__figure
+
+    &__figure {
+        font-family: var.$main-font;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 4rem;
+        line-height: 4rem;
+        color: #18063C;
+        @media (min-width:801px) {
+            font-size: 3rem;
+        }
+    }
+
+    // .fun-fact__description
+
+    &__description {
+        font-family: var.$description-font;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.25rem;
+        line-height: 1.25rem;
+        color: #404040;
+        opacity: 0.6;
+
+    }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scss/style.css">
+    <title>Vue</title>
+</head>
+
+<body>
+    <div id="app">
+
+        <div class="vue-form">
+            <label for="text">Добавление записи</label>
+            <textarea class="vue-form__input" v-bind:class="{'vue-form__input_red': charCount > 144}" wrap="hard"
+                v-on:input="checkInput" v-model="textInput">
+            </textarea>
+            <div class="vue-form__container">
+                <button class="vue-form__button" v-bind:class="{'vue-form__button_disabled': disable}"
+                    v-bind:disabled="disable" v-on:click="newNote">Добавить запись</button>
+                <p class="vue-form__counter"
+                    v-bind:class="{'vue-form__counter_red': charCount > 144, 'vue-form__counter_yellow': 144 - charCount <= 10}"
+                    v-show="textInput.length > 0">
+                    {{charCount}} / 144
+                </p>
+            </div>
+        </div>
+
+        <h2 class="notes-amount" v-if="notes.length == 0"></h2>
+        <h2 class="notes-amount" v-else-if="notes.length == 1">Запись</h2>
+        <div class="notes-count" v-else>
+            <h2 class="notes-amount">Записи</h2>
+            <p class="notes-count__figure">{{notes.length}}</p>
+        </div>
+
+        <ul class="notes-list">
+            <li class="notes-list__note note" v-for="note in notes" v-bind:key="note.text">
+                <p class="note__text">{{note.text}}</p>
+                <p class="note__date">{{note.date}}</p>
+            </li>
+        </ul>
+
+    </div>
+
+
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="vue.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+@use "vars" as var;
+
+.link {
+    font-family: var.$main-font;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.15rem;
+    line-height: 1.75rem;
+    border-radius: 34px;
+    display: block;
+    width: fit-content;
+    background-color: #76251a;
+    border: #76251a solid 2px;
+    color: #FFFFFF;
+    transition: 0.2s;
+    padding: 16px 32px;
+ 
+    &:hover {
+        box-sizing: border-box;
+        background-color: #FFFFFF;
+        color: #76251a;
+    }
+}
+
+.header-type-1 {
+    font-family: var.$main-font;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.75rem;
+    line-height: 2.75rem;
+    text-transform: capitalize;
+    color: #1C0E0D;
+    @media (min-width:801px) {
+        font-size: 4rem;
+        line-height: 5.5rem;
+    }
+}
+
+.header-type-2 {
+    font-family: var.$main-font;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    text-transform: capitalize;
+    color: #18063C;
+    @media (min-width:801px) {
+        font-size: 3rem;
+        line-height: 4.5rem;
+    }
+}
+
+.text-type-1 {
+    font-family: var.$description-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 2.25rem;
+    color: #40201E;
+    opacity: 0.8;
+    @media (min-width: 801px) {
+        font-size: 1.25rem;
+    }
+}
+
+.text-type-2 {
+    font-family: var.$description-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #40201E;
+    opacity: 0.8;
+    @media (min-width: 801px) {
+        font-size: 1.25rem;
+        line-height: 2.25rem;        
+    }
+}
+
+.nav-link {
+    font-family: var.$main-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    color: #1C0E0D;
+    transition: 0.2s;
+    &:hover {
+        color: #967470;
+    }
+}
+
+.main-logo {
+    width: 135px;
+    height: 30px;
+}

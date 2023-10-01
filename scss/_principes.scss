@@ -1,0 +1,184 @@
+@use "vars" as var;
+
+.principes {
+    position: relative;
+    background-color: #f4feff;
+    padding-top: 48px;
+    padding-bottom: 148px;
+
+    @media (min-width: 801px) {
+        background-image: url(../img/principe-desk-bg.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top; 
+        
+    }
+
+    &__flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 600px;
+        margin: 0 auto;
+        gap: 20px;
+        
+        @media (min-width: 1400px) {
+            flex-direction: row;
+            max-width: unset;
+        }
+    }
+
+    &__text-content {
+        min-width: 600px;
+    }
+
+
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-image: url(../img/principe-bg-chart.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 104px;
+        height: 104px;
+        top: -30px;
+        right: -24px;
+        @media (min-width: 801px) {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            padding: 0;
+            overflow: hidden;
+            border: 0;
+            clip: rect(0 0 0 0);
+        }
+    }
+
+		// .principes__header
+
+        &__header {
+            text-align: center;
+            margin-bottom: 32px;
+            @media (min-width: 801px) {
+                max-width: 750px;
+                text-align: left;
+            }
+        }
+    
+        &__text {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            padding: 0;
+            overflow: hidden;
+            border: 0;
+            clip: rect(0 0 0 0);
+        @media (min-width: 801px) {
+            all: unset;
+            display: block;
+            font-family: var.$description-font;
+            font-style: normal;
+            text-align: left;
+            font-weight: 400;
+            font-size: 1.25rem;
+            line-height: 2.25rem;
+            color: #404040;
+            opacity: 0.8;
+            margin-bottom: 64px;
+            max-width: 500px;
+        
+        }
+        
+        }
+
+		// .principes__blocks
+
+		&__blocks {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+            @media (min-width:801px) {
+                gap: 64px;
+                justify-content: flex-start;
+            }
+
+            
+        }
+
+		// .principes__block
+
+		&__block {
+            
+            margin: 0 auto;
+            @media (min-width: 801px) {
+                margin-right: auto;
+                margin-left: 0;
+            }
+            &:nth-child(2) {
+                position: relative;
+                @media (min-width: 801px) {
+                margin-right: 0;
+                margin-left: auto;
+                &::before {
+                    position: absolute;
+                    content: "";
+                    background-image: url(../img/to-left-arrow.svg);
+                    width: 89px;
+                    height: 128px;
+                    bottom: -80px;
+                    left: -250px;
+                }}
+            }
+            &:nth-child(1) {
+                position: relative;
+                @media (min-width: 801px) {
+                
+                &::after {
+                    position: absolute;
+                    content: "";
+                    background-image: url(../img/to-rhight-arrow.svg);
+                    background-repeat: no-repeat;
+                    width: 99px;
+                    height: 128px;
+                    bottom: -50px;
+                    right: -140px;
+                }}
+            }
+        }
+
+		// .principes__image-container
+
+		&__images-container {
+              
+        }
+
+		// .principes__image
+
+		&__image {
+           max-width: 680px;
+        }
+        
+        &__desk-image {
+        
+        }
+
+}
+
+.principes-grid {
+
+    &__column-1 {
+        @media (min-width: 801px) {
+            grid-column: span 2;
+            max-width: 600px;
+            justify-self: center;
+        }
+        @media (min-width: 1400px) {
+            all: unset;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+.first-section-bg {
+    background-image: url(../img/mobile-bg.svg);
+    background-color: #FFF8F2;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    @media (min-width: 801px) {
+        background-image: url(../img/threesectionbg.png);
+        background-size: cover;
+    }
+}
+
+.hero {
+    padding-bottom: 85px;
+    margin: 0 auto;
+    max-width: 500px;
+    @media (min-width: 801px) {
+        display: flex;
+        max-width: unset;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    // .hero__header
+
+    &__header {
+        margin-top: 80px;
+        @media (min-width: 801px) {
+            width: 800px;
+            text-align: center;
+            margin-top: 180px;
+        }
+    }
+
+    // .hero__text
+
+    &__text {
+        margin-top: 12px;
+        @media (min-width: 801px) {
+           max-width: 650px; 
+           text-align: center;
+           margin-top: 24px;
+        }
+    }
+
+    // .hero__button
+
+    &__button {
+        margin-top: 40px;
+        @media (min-width:450px) {
+            margin: 40px auto 0;
+            margin-right: 170px;
+        }
+        @media (min-width: 801px) {
+            margin: 0;
+            margin-top: 68px;
+        }
+    }
+}
+

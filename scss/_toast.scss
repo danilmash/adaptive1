@@ -1,0 +1,81 @@
+@use "vars" as var;
+
+.toast {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #910a0a;
+    color: #fff;
+    padding: 32px;
+    border-radius: 32px;
+    min-width: 300px;
+    max-width: 500px;
+    z-index: 1; 
+    // .toast__mask
+
+
+    &__content {
+        max-width: 500px;
+        padding: 32px;
+        border-radius: 32px;
+        
+    }
+
+    // .toast__row
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    // .toast__header
+
+    &__header {
+        font-family: var.$main-font;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.5rem;
+        line-height: 2.25rem;
+        text-transform: capitalize;
+    }
+
+    // .toast__close
+
+    &__close {
+        width: 32px;
+        background: none;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        border-radius: 7px;
+        &:focus {
+            outline: 3px solid #fff;
+        }
+    }
+
+    // .toast__btn-img
+
+    &__btn-img {
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        &:hover, &:active, &:focus {
+            color: #000;     
+        }
+        
+    }
+
+    // .toast__text
+
+    &__text {
+        font-family: var.$description-font;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.25rem;
+        line-height: 2.25rem;
+        text-align: center;
+        margin-top: 24px;
+    }
+}

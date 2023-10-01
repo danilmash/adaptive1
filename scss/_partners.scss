@@ -1,0 +1,126 @@
+.partners {
+    padding: 80px 20px;
+    max-width: 800px;
+
+    // .analytics__header
+    @media (min-width:801px) {
+        max-width: unset;
+        padding: 120px 20px 80px;
+        background-color: #F8FEFE;
+    }
+
+    // .partners__grid
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 32px;
+        @media (min-width:1100px) {
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 100px;
+        }
+    }
+
+    // .partners__desk-image
+
+    &__desk-image {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        border: 0;
+        clip: rect(0 0 0 0);
+        @media (min-width:1100px) {
+            all: unset;
+            width: 100%;
+            max-width: 800px;
+            place-self: center;            
+        }
+    }
+
+    // .partners__content
+
+    &__content {
+        margin: 0 auto;
+        max-width: 525px;
+        @media (min-width:1100px) {
+            align-self: center;
+            margin: 0;     
+        }
+    }
+
+    // .partners__header
+
+    &__header {}
+
+    // .partners__text
+
+    &__text {
+        margin-top: 18px;
+        margin-bottom: 28px;
+    }
+
+    // .partners__images-container
+
+    &__images-container {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(2, 120px);
+        grid-gap: 16px;
+        @media (min-width:1100px) {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            padding: 0;
+            overflow: hidden;
+            border: 0;
+            clip: rect(0 0 0 0);     
+        }
+    }
+
+    // .partners__image-container
+
+    &__image-container {
+        max-width: 120px;
+        padding: 28px;
+        border-radius: 10px;
+
+        &_1 {
+            background-color: rgba(65, 165, 238, 0.1);
+        }
+
+        &_2 {
+            background-color: rgba(243, 83, 37, 0.1);
+            border-radius: 15px;
+        }
+        
+        &_3 {
+            background-color: rgba(0, 172, 71, 0.1);
+            border-radius: 15px;
+        }
+        
+        &_4 {
+            background-color: rgba(66, 133, 244, 0.1);
+            border-radius: 20px;
+        }
+    }
+
+    // .partners__image
+
+    &__image {}
+}
+.header-type-2 {
+}
+.text-type-1 {
+}
+.partnres {
+
+    // .partnres__btn
+
+    &__btn {}
+}
+.link {
+}

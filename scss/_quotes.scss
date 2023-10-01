@@ -1,0 +1,220 @@
+@use "vars" as var;
+
+.quotes {
+    padding-bottom: 80px;
+    background-image: url(../img/quotes-mobie-bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    @media (min-width: 1100px) {
+        background-image: url(../img/quotes-desk-bg.png);
+        background-size: cover;
+        padding-bottom: 204px;
+        padding-top: 173px;
+    }
+
+    &__center {
+        max-width: 525px;
+        margin: 0 auto;
+        @media (min-width: 1100px) {
+            max-width: 1000px;
+        }
+    }
+
+    &__header {
+        margin-bottom: 30px;
+        @media (min-width: 1100px) {
+            text-align: center;
+
+        }
+    }
+
+    // .quotes__Text
+
+    &__text {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        border: 0;
+        clip: rect(0 0 0 0);
+        @media (min-width: 1100px) {
+            all: unset;
+            display: block;
+            text-align: center;
+            font-family: var.$description-font;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 2.25rem;
+            color: #40201E;
+            opacity: 0.8;
+            @media (min-width: 801px) {
+                font-size: 1.25rem;
+                line-height: 2.25rem;
+            }
+        }
+    }
+
+    // .quotes__figures-container
+
+    &__figures-container-outer {
+        display: flex;
+        max-width: 325px;
+        overflow: hidden;
+        @media (min-width: 1100px) {
+            max-width: 1100px;
+        }
+    }
+
+    &__figures-container {
+        display: flex;
+        transition: all 1s;
+    }
+
+    // .quotes__quote-container
+
+    &__quote-container {
+        @media (min-width: 1100px) {
+            margin-top: 60px;
+        }
+    }
+
+    // .quotes__map
+
+    &__map {
+        margin-top: 14px;
+        @media (min-width: 1100px) {
+            margin-top: -64px;
+            margin-left: 348px;
+            position: relative;
+            z-index: 2;
+        }
+    }
+
+    // .quotes__map-buttons
+
+    &__button {
+        width: 10px;
+        height: 10px;
+        background-color: rgba(255, 85, 62, 0.2);
+        transition: all .5s;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        margin-right: 11px;   
+        cursor: pointer;
+    }
+}
+.quote-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    gap: 30px;
+    @media (min-width: 1100px) {
+        grid-template-columns: 300px 1fr;
+        align-items: center;
+        max-width: 1100px;
+        gap: 0;
+    }
+    // .quote-container__avatar-container
+
+    &__avatar-container {
+        width: 170px;
+        height: 144px;
+        background-color: #FFF8F2;
+        border-radius: 40px;
+        @media (min-width: 1100px) {
+            width: 300px;
+            height: 380px;
+            border-radius: 370px;
+            grid-row: span 3;
+        }
+    }
+
+    // .quote-container__avatar
+
+    &__avatar {
+        
+    }
+
+
+
+    
+    // .quote-container__quote
+
+    &__quote {
+        font-family: var.$additional-font;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.75rem;
+        color: #1C0E0D;
+        opacity: 0.8;
+        margin-bottom: 28px;
+        width: 325px;
+        @media (min-width: 1100px) {
+            font-size: 1.25rem;
+            line-height: 2.25rem;
+            width: 652px;
+            margin-top: 70px;
+            grid-row: 1;
+            grid-column: 2;
+            margin-left: 48px;
+        }
+    }
+
+    // .quote-container__caption
+
+    &__caption {
+        @media (min-width: 1100px) {
+            margin-left: 48px;
+        }
+    }
+
+    // .quote-container__author
+
+    &__author {
+        font-family: var.$description-font;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        color: #38363C;
+        margin-bottom: 10px;
+        @media (min-width: 1100px) {
+            font-size: 1.5rem;
+        }
+    }
+
+    // .quote-container__specialization
+
+    &__specialization {
+        font-family: var.$description-font;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        color: #38363C;
+        opacity: 0.7;
+        @media (min-width: 1100px) {
+            font-size: 1.25rem;
+        }
+    }
+}
+
+.btn-active {
+    width: 35px;
+    border-radius: 7px;
+    background-color: #FF553E;
+}
+.first {
+}
+.second {
+}
+.third {
+}
+.fourth {
+}

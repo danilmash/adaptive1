@@ -1,0 +1,121 @@
+@use "vars" as var;
+
+.features {
+    padding: 32px 0;
+    
+    // .features__header
+
+    &__header {
+        text-align: center;
+        max-width: 500px;
+        margin: 0 auto;
+        @media (min-width: 801px) {
+            max-width: 800px;
+        }
+    }
+
+    // .features__text
+
+    &__text {
+        text-align: center;
+        max-width: 500px;
+        margin: 16px auto 0;
+        @media (min-width: 801px) {
+            max-width: 650px;
+        }
+    }
+
+    // .features__blocks
+
+    &__blocks {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 28px;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    // .features__block
+
+    &__block {}
+}
+
+
+.feature {
+    max-width: 340px;
+    height: 200px;
+    padding: 20px;
+    border-radius: 30px;
+    
+    color: #fff;
+    // .feature__icon-container
+
+    &__icon-container {
+        padding: 13.6px;
+        background-color: #FFFFFF50;
+        border-radius: 15px;
+        width: 100%;
+    }
+
+    // .feature__icon
+
+    &__icon {}
+
+    // .feature__header
+
+    &__header {
+        margin-top: 12px;
+        font-family: var.$main-font;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.25rem;
+        line-height: 1.25rem;
+        color: #FFFFFF;
+    }
+
+    // .feature__text
+
+    &__text {
+        margin-top: 8px;
+        font-family: var.$description-font;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        color: #FFFFFF;
+    }
+
+    &_cyan {
+        background-color: #224c51;
+    }
+    &_purple {
+        background-color: #33296e;
+    }
+    &_orange {
+        background-color: #b75839;
+    }
+}
+
+.gradient-border {
+    max-width: 63px;
+    padding: 1.5px;
+    border-radius: 15px;
+    background: linear-gradient(#FFFFFF, #FFFFFF00);
+    background-repeat: no-repeat;
+}
+
+.icon-container-background {
+
+    border-radius: 15px;
+
+    &_cyan {
+        background-color: #224c51;
+    }
+    &_purple {
+        background-color: #33296e;
+    }
+    &_orange {
+        background-color: #b75839;
+    }
+}
